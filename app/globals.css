@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
 }
 
 @theme inline {
@@ -10,17 +17,109 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* VSA brand colors */
+  --color-vsa-red:     #CE181E;
+  --color-vsa-red-bright: #F50F18;
+  --color-vsa-darkred: #8C0005;
+  --color-vsa-gold:    #E1B97D;
+  --color-vsa-blue:    #022F61;
+  --color-vsa-black:   #181818;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+html {
+  font-size: 110%; /* 16px → 17.6px base, scales all rem-based text ~+2px */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.65s ease forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-250 { animation-delay: 250ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-550 { animation-delay: 550ms; }
+
+/* Scroll fade-in */
+.fade-in-hidden {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero scroll indicator bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce 1.4s ease-in-out infinite;
+}
+
+/* ── Floating orbs ─────────────────────────────── */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0px,   0px)  scale(1);    }
+  33%       { transform: translate(35px, -45px) scale(1.06); }
+  66%       { transform: translate(-25px, 20px) scale(0.94); }
+}
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0px,   0px)  scale(1);    }
+  33%       { transform: translate(-40px, 28px) scale(1.08); }
+  66%       { transform: translate(22px, -30px) scale(0.93); }
+}
+@keyframes floatOrb3 {
+  0%, 100% { transform: translate(0px,  0px)  scale(1);    }
+  50%       { transform: translate(18px, 35px) scale(1.1);  }
+}
+.orb-1 { animation: floatOrb1  9s ease-in-out infinite;      }
+.orb-2 { animation: floatOrb2 11s ease-in-out infinite 1.2s; }
+.orb-3 { animation: floatOrb3  7s ease-in-out infinite 3s;   }
+
+/* ── Gradient shimmer text ─────────────────────── */
+@keyframes gradientFlow {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+.animate-gradient-text {
+  background: linear-gradient(90deg, #ffffff 0%, #E1B97D 30%, #ffffff 55%, #fde68a 80%, #ffffff 100%);
+  background-size: 280% 100%;
+  animation: gradientFlow 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Button glow pulse ─────────────────────────── */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0   0px rgba(206, 24, 30, 0.45); }
+  50%       { box-shadow: 0 0 22px 8px rgba(206, 24, 30, 0.18); }
+}
+.btn-glow {
+  animation: pulseGlow 2.6s ease-in-out infinite;
 }
