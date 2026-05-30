@@ -114,10 +114,10 @@ export default function EventsPage() {
               {[
                 { src: '/images/events_galleries/cafe_culture_1.jpg', alt: 'Cafe Culture 1' },
                 { src: '/images/events_galleries/cafe_culture_2.jpg', alt: 'Cafe Culture 2' },
-                { src: '/images/events_galleries/yangmingshan_1.JPG', alt: 'Yangmingshan 1' },
-                { src: '/images/events_galleries/yangmingshan_2.JPG', alt: 'Yangmingshan 2' },
-                { src: '/images/events_galleries/keelung_shifen_1.JPG', alt: 'Keelung Shifen 1' },
-                { src: '/images/events_galleries/keelung_shifen_2.JPG', alt: 'Keelung Shifen 2' },
+                { src: '/images/events_galleries/yangmingshan_1.jpg', alt: 'Yangmingshan 1' },
+                { src: '/images/events_galleries/yangmingshan_2.jpg', alt: 'Yangmingshan 2' },
+                { src: '/images/events_galleries/keelung_shifen_1.jpg', alt: 'Keelung Shifen 1' },
+                { src: '/images/events_galleries/keelung_shifen_2.jpg', alt: 'Keelung Shifen 2' },
               ].map((img, i) => (
                 <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group">
                   <Image
