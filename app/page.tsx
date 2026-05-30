@@ -147,24 +147,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ảnh nhóm */}
-      <FadeIn>
-        <section className="py-16 px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-semibold mb-8 text-vsa-white text-center">{h.community_title}</h2>
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/events_galleries/cafe_culture_1.jpg"
-                alt="Thành viên TKU VSA tại sự kiện"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <p className="text-center text-zinc-400 mt-3 text-sm italic">{h.community_caption}</p>
-          </div>
-        </section>
-      </FadeIn>
-
       {/* Sự kiện */}
       <FadeIn>
         <section className="py-16 px-6 max-w-3xl mx-auto w-full">

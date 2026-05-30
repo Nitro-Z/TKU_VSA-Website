@@ -106,21 +106,29 @@ export default function EventsPage() {
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
-            <h2 className="text-2xl font-semibold mb-2 text-vsa-white">{e.gallery_title}</h2>
-            <p className="text-zinc-400 text-sm mb-8">{e.gallery_subtitle}</p>
+            <h2 className="text-2xl font-semibold mb-8 text-vsa-white">{e.gallery_title}</h2>
           </FadeIn>
+
           <FadeIn>
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
-              <Image
-                src="/images/events_galleries/cafe_culture_1.jpg"
-                alt="Thành viên TKU VSA"
-                fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-              />
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {[
+                { src: '/images/events_galleries/cafe_culture_1.jpg', alt: 'Cafe Culture 1' },
+                { src: '/images/events_galleries/cafe_culture_2.jpg', alt: 'Cafe Culture 2' },
+                { src: '/images/events_galleries/yangmingshan_1.JPG', alt: 'Yangmingshan 1' },
+                { src: '/images/events_galleries/yangmingshan_2.JPG', alt: 'Yangmingshan 2' },
+                { src: '/images/events_galleries/keelung_shifen_1.JPG', alt: 'Keelung Shifen 1' },
+                { src: '/images/events_galleries/keelung_shifen_2.JPG', alt: 'Keelung Shifen 2' },
+              ].map((img, i) => (
+                <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
-            <p className="text-center text-zinc-400 mt-3 text-sm italic">
-              {e.gallery_caption}
-            </p>
           </FadeIn>
         </div>
       </section>

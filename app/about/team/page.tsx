@@ -66,7 +66,7 @@ const departments: Department[] = [
   {
     name: "Ban Sự kiện",
     members: [
-      { role: "Trưởng ban", name: "Trần Nguyễn Hùng",       img: "/images/ganbu_images/hungtran_1.jpg",    isLeader: true, imgStyle: { transform: "scale(1.3)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/alex_chenruanxiong/" },
+      { role: "Trưởng ban", name: "Trần Nguyễn Hùng",       img: "/images/ganbu_images/hungtran.jpg",    isLeader: true, imgStyle: { transform: "scale(1.3)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/alex_chenruanxiong/" },
       { role: "Thành viên", name: "Mai Xuân Quốc Anh",       img: "/images/ganbu_images/quocanhmai.png",              imgStyle: { transform: "scale(1.2)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/iam.richard_06/" },
       { role: "Thành viên", name: "Nguyễn Thuỳ Dương",       img: "/images/ganbu_images/thuyduong.png",               imgStyle: { transform: "scale(1.3)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/wendyy._.aa/" },
       { role: "Thành viên", name: "Phạm Phúc Minh",          img: "/images/ganbu_images/minhpham.png",                imgStyle: { transform: "scale(1.3)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/mphamphuc/" },
