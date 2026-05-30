@@ -3,6 +3,9 @@
 # Claude Code config
 .claude/
 
+# Internal team docs
+administration/
+
 # dependencies
 /node_modules
 /.pnp
@@ -46,3 +49,7 @@ next-env.d.ts
 # internal / claude
 CLAUDE.md
 AGENTS.md
+
+#administration
+administration/
+
