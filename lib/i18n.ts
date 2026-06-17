@@ -13,6 +13,7 @@ type T = {
     events: string
     faq: string
     register: string
+    contact: string
   }
   home: {
     hero_title: string
@@ -132,6 +133,7 @@ const vi: T = {
     events: 'Sự kiện',
     faq: 'Câu hỏi thường gặp',
     register: 'Đăng ký thành viên',
+    contact: 'Liên hệ',
   },
   home: {
     hero_title: 'Hội Sinh viên Việt Nam tại trường Đại học Đạm Giang',
@@ -339,6 +341,7 @@ const en: T = {
     events: 'Events',
     faq: 'FAQ',
     register: 'Become a Member',
+    contact: 'Contact',
   },
   home: {
     hero_title: 'Vietnamese Student Association at Tamkang University',
@@ -546,6 +549,7 @@ const zh: T = {
     events: '活動',
     faq: '常見問題',
     register: '加入會員',
+    contact: '聯絡我們',
   },
   home: {
     hero_title: '淡江大學越南同學聯誼會',
@@ -553,7 +557,7 @@ const zh: T = {
     cta_register: '加入會員',
     cta_contact: '立即聯絡',
     who_title: '我們是誰？',
-    who_body: 'TKU VSA（淡江越南同學聯誼會）是淡江大學（淡江大學）越南留學生組成的聯誼會。我們的成立宗旨是連結越南留學生社群，協助新生迅速適應台灣的學習與生活環境，並協助完成必要的行政手續。',
+    who_body: 'TKU VSA（淡江越南同學聯誼會）是淡江大學越南留學生組成的聯誼會。我們的成立宗旨是連結越南留學生社群，協助新生迅速適應台灣的學習與生活環境，並協助完成必要的行政手續。',
     mission_title: '我們的使命',
     missions: [
       { title: '學習支持', desc: '協助學生取得學習資源，快速適應台灣的大學環境。' },
@@ -664,7 +668,7 @@ const zh: T = {
       {
         category: '關於 TKU VSA',
         items: [
-          { q: 'TKU VSA 是什麼？', a: 'TKU VSA（淡江越南同學聯誼會）是台灣淡江大學（淡江大學）的越南留學生聯誼會。本會成立目的是連結越南留學生社群、協助新生適應新環境，並舉辦文化與學術交流活動。' },
+          { q: 'TKU VSA 是什麼？', a: 'TKU VSA（淡江越南同學聯誼會）是台灣淡江大學的越南留學生聯誼會。本會成立目的是連結越南留學生社群、協助新生適應新環境，並舉辦文化與學術交流活動。' },
           { q: '誰可以加入？', a: '所有目前就讀淡江大學的越南籍學生——包含大學部、碩士及博士班——均可報名成為會員。' },
           { q: '會費是多少？', a: '每學年 300 NTD。會費用於舉辦活動、印製資料及維持聯誼會日常運作。' },
           { q: '何時可以報名？', a: '聯誼會於每學年初開放報名，通常在九月份。你可以在本網站填寫線上表單，或直接聯絡幹部。' },

@@ -29,12 +29,12 @@ export default function FAQPage() {
                 {section.items.map((item, ii) => (
                   <details
                     key={ii}
-                    className="group bg-white border border-zinc-100 rounded-xl shadow-sm overflow-hidden"
+                    className="group bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 rounded-xl shadow-sm overflow-hidden"
                   >
-                    <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-zinc-800 text-sm hover:bg-zinc-50 transition-colors">
+                    <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-zinc-800 dark:text-zinc-100 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors">
                       {item.q}
                       <svg
-                        className="w-4 h-4 shrink-0 text-zinc-400 transition-transform duration-200 group-open:rotate-180"
+                        className="w-4 h-4 shrink-0 text-zinc-400 dark:text-zinc-500 transition-transform duration-200 group-open:rotate-180"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth={2}
@@ -43,7 +43,7 @@ export default function FAQPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
-                    <div className="px-5 pb-5 pt-1 text-zinc-500 text-sm leading-7 border-t border-zinc-50">
+                    <div className="px-5 pb-5 pt-1 text-zinc-500 dark:text-zinc-300 text-sm leading-7 border-t border-zinc-50 dark:border-zinc-700">
                       {item.a}
                     </div>
                   </details>

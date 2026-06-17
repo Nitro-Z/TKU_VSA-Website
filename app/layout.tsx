@@ -18,6 +18,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "TKU Vietnamese Student Association",
   description: "Tổ chức hỗ trợ sinh viên Việt Nam học tập, kết nối và giao lưu tại Đài Loan. Giúp sinh viên mới thích nghi với môi trường, hỗ trợ tìm việc làm và hoàn thành các thủ tục cần thiết.",
+  openGraph: {
+    title: "TKU Vietnamese Student Association",
+    description: "Tổ chức hỗ trợ sinh viên Việt Nam học tập, kết nối và giao lưu tại Đài Loan.",
+    url: "https://tku-vsa.vercel.app",
+    siteName: "TKU VSA",
+    locale: "vi_VN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TKU Vietnamese Student Association",
+    description: "Tổ chức hỗ trợ sinh viên Việt Nam học tập, kết nối và giao lưu tại Đài Loan.",
+  },
 };
 
 export default function RootLayout({

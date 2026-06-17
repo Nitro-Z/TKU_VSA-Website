@@ -12,13 +12,13 @@ export default function AboutPage() {
     <div className="flex flex-col min-h-full font-sans">
 
       {/* Hero */}
-      <section className="relative flex flex-col items-center justify-center text-center text-white py-28 px-6 overflow-hidden min-h-[340px]">
+      <section className="relative flex flex-col items-center justify-center text-center text-white py-28 px-6 overflow-hidden min-h-[540px]">
         <Image
           src="/images/system_images/tku_campus.jpg"
           alt="Campus Tamkang University"
           fill
           className="object-cover"
-          style={{ objectPosition: "65% 70%" }}
+          style={{ objectPosition: "65% 90%" }}
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -29,10 +29,10 @@ export default function AboutPage() {
           <div className="orb-3 absolute top-1/2 left-1/2 w-40 h-40 rounded-full bg-blue-400/15 blur-2xl" />
         </div>
         <div className="relative z-10 flex flex-col items-center gap-4">
-          <h1 className="text-3xl font-bold drop-shadow-lg animate-slide-up animate-gradient-text">
+          <h1 className="text-2xl md:text-3xl font-bold drop-shadow-lg animate-slide-up text-white max-w-4xl leading-tight">
             {a.hero_title}
           </h1>
-          <p className="text-blue-200 max-w-lg text-sm leading-7 animate-slide-up delay-250">
+          <p className="text-white max-w-2xl text-lg leading-8 animate-slide-up delay-250 font-medium">
             {a.hero_subtitle}
           </p>
           <div className="animate-bounce-slow mt-2 text-white/50 animate-slide-up delay-400">
