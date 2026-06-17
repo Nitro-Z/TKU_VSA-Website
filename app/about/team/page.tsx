@@ -156,13 +156,13 @@ export default function TeamPage() {
           <div className="orb-3 absolute top-1/2 left-1/2 w-40 h-40 rounded-full bg-blue-400/15 blur-2xl" />
         </div>
         <div className="relative z-10 flex flex-col items-center gap-3">
-          <p className="text-blue-300 text-sm font-medium tracking-widest uppercase animate-slide-up">
+          <p className="text-white text-base font-medium tracking-widest uppercase animate-slide-up">
             {te.hero_label}
           </p>
-          <h1 className="text-3xl font-bold drop-shadow-lg animate-slide-up animate-gradient-text">
+          <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg animate-slide-up text-white">
             {te.hero_title}
           </h1>
-          <p className="text-blue-200 max-w-lg text-sm leading-7 animate-slide-up delay-250">
+          <p className="text-white max-w-lg text-base leading-8 animate-slide-up delay-250 font-medium">
             {te.hero_subtitle}
           </p>
         </div>
