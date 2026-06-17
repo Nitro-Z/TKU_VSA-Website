@@ -28,9 +28,9 @@ type Department = {
 
 const departments: Department[] = [
   {
-    name: "Ban Lãnh đạo",
+    name: "Ban Lãnh Đạo",
     members: [
-      { role: "Chủ tịch CLB",    name: "Phạm Khắc Nam",      img: "/images/ganbu_images/nampham.jpg",         isLeader: true, imgStyle: { transform: "scale(1.4)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/_nampk_/" },
+      { role: "Chủ tịch CLB",    name: "Phạm Khắc Nam",      img: "/images/ganbu_images/namphamm.jpg",         isLeader: true, imgStyle: { transform: "scale(1.0)", transformOrigin: "center 100%", filter: "brightness(1.1)" }, social: "https://www.instagram.com/_nampk_/" },
       { role: "Phó Chủ tịch CLB", name: "Nguyễn Thanh Ngọc", img: "/images/ganbu_images/nguyenthanhngoc.jpg", isLeader: true, imgStyle: { transform: "scale(1.1)",   transformOrigin: "center 100%" }, social: "https://www.instagram.com/yuqing_noc/" },
     ],
   },
@@ -42,13 +42,13 @@ const departments: Department[] = [
     ],
   },
   {
-    name: "Ban Nhân sự",
+    name: "Ban Nhân Sự",
     members: [
       { role: "Trưởng ban", name: "Đỗ Thị Hà Linh", img: "/images/ganbu_images/dolinh.png", isLeader: true, imgStyle: { transform: "scale(1.3)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/fahnil_7/" },
     ],
   },
   {
-    name: "Ban Truyền thông",
+    name: "Ban Truyền Thông",
     members: [
       { role: "Trưởng ban", name: "Mai Xuân Bảo",       img: "/images/ganbu_images/mxbao.png",       isLeader: true, imgStyle: { transform: "scale(1)", transformOrigin: "center 30%" }, social: "https://www.instagram.com/mxbao_106/" },
       { role: "Thành viên", name: "Đỗ Thị Thảo Trinh",  img: "/images/ganbu_images/thaotrinh.png",              imgStyle: { transform: "scale(1)", transformOrigin: "center 30%" }, social: "https://www.instagram.com/xxibgdtriwgg_/" },
@@ -64,7 +64,7 @@ const departments: Department[] = [
     ],
   },
   {
-    name: "Ban Sự kiện",
+    name: "Ban Sự Kiện",
     members: [
       { role: "Trưởng ban", name: "Trần Nguyễn Hùng",       img: "/images/ganbu_images/hungtran.jpg",    isLeader: true, imgStyle: { transform: "scale(1.3)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/alex_chenruanxiong/" },
       { role: "Thành viên", name: "Mai Xuân Quốc Anh",       img: "/images/ganbu_images/quocanhmai.png",              imgStyle: { transform: "scale(1.2)", transformOrigin: "center 100%" }, social: "https://www.instagram.com/iam.richard_06/" },

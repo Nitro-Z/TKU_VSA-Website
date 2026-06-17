@@ -11,29 +11,40 @@ export default function Home() {
     <div className="flex flex-col min-h-full font-sans">
 
       {/* Hero */}
-      <section className="relative flex flex-col items-center justify-center text-center text-white py-32 px-6 overflow-hidden min-h-[420px]">
-        <Image
-          src="/images/system_images/tku_campus.jpg"
-          alt="Campus Tamkang University"
-          fill
-          className="object-cover"
-          style={{ objectPosition: "70% 110%" }}
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" />
-
-        {/* Floating orbs */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="orb-1 absolute -bottom-16 -left-16 w-80 h-80 rounded-full bg-vsa-red/20 blur-3xl" />
-          <div className="orb-2 absolute -bottom-10 -right-10 w-72 h-72 rounded-full bg-vsa-gold/20 blur-3xl" />
-          <div className="orb-3 absolute top-1/2 left-2/3 w-48 h-48 rounded-full bg-blue-400/15 blur-2xl" />
+      <section className="relative flex flex-col items-center justify-center text-center text-white px-6 overflow-hidden min-h-[90dvh]">
+        {/* Split background: Vietnam left, Taiwan right */}
+        <div className="absolute inset-0 flex">
+          <div className="relative w-1/2 h-full">
+            <Image
+              src="/images/system_images/landmark81.jpg"
+              alt="Landmark 81 - Việt Nam"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/45" />
+          </div>
+          <div className="relative w-1/2 h-full">
+            <Image
+              src="/images/system_images/taipei101.jpg"
+              alt="Taipei 101 - Đài Loan"
+              fill
+              className="object-cover"
+              style={{ objectPosition: "0% center" }}
+              priority
+            />
+            <div className="absolute inset-0 bg-black/45" />
+          </div>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center gap-6">
-          <h1 className="text-3xl font-bold mb-2 animate-slide-up drop-shadow-lg text-white">
+        {/* Center divider line */}
+        <div className="absolute inset-y-0 left-1/2 w-px bg-white/20 z-10" />
+
+        <div className="relative z-10 flex flex-col items-center gap-6 py-32">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 animate-slide-up drop-shadow-lg text-white">
             {h.hero_title}
           </h1>
-          <p className="text-0.875g max-w-xl text-blue-100 animate-slide-up delay-250 drop-shadow">
+          <p className="max-w-xl text-blue-100 animate-slide-up delay-250 drop-shadow text-sm leading-7">
             {h.hero_subtitle}
           </p>
           <div className="animate-slide-up delay-400 mt-2 flex flex-wrap justify-center gap-3">
@@ -135,7 +146,7 @@ export default function Home() {
             {h.support_items.map((item, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <div className="bg-white dark:bg-zinc-900 rounded-xl p-6 shadow-sm border border-zinc-100 dark:border-zinc-700 transition-all duration-200 hover:-translate-y-2 hover:shadow-md cursor-default h-full">
-                  <div className="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-900 text-vsa-red flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-vsa-red/10 dark:bg-vsa-red/20 text-vsa-red flex items-center justify-center mb-3">
                     <SupportIcon index={i} />
                   </div>
                   <h3 className="font-semibold text-vsa-black dark:text-zinc-100 mb-2">{item.title}</h3>

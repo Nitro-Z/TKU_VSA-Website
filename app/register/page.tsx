@@ -116,7 +116,7 @@ export default function RegisterPage() {
 
           <a
             href="/"
-            className="inline-block bg-red-700 text-white font-semibold px-6 py-3 rounded-full hover:bg-red-800 transition-colors"
+            className="inline-block bg-vsa-red text-white font-semibold px-6 py-3 rounded-full hover:bg-vsa-darkred transition-colors"
           >
             {r.back_home}
           </a>
@@ -147,7 +147,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 required
                 placeholder={r.name_placeholder}
-                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition"
               />
             </div>
 
@@ -161,7 +161,7 @@ export default function RegisterPage() {
                 value={form.dob}
                 onChange={handleChange}
                 required
-                className={`w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition ${form.dob ? 'text-zinc-800' : 'text-zinc-400'}`}
+                className={`w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition ${form.dob ? 'text-zinc-800' : 'text-zinc-400'}`}
               />
             </div>
 
@@ -176,7 +176,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 required
                 placeholder="41XXXXXXX"
-                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition"
               />
             </div>
 
@@ -191,7 +191,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 required
                 placeholder={r.major_placeholder}
-                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition"
               />
             </div>
 
@@ -207,7 +207,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   required
                   placeholder="example@gmail.com"
-                  className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                  className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition"
                 />
               </div>
               <div>
@@ -221,7 +221,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   required
                   placeholder="+886 9XX XXX XXX"
-                  className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                  className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition"
                 />
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function RegisterPage() {
                 value={form.year_of_study}
                 onChange={handleChange}
                 required
-                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition bg-white"
+                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition bg-white"
               >
                 <option value="">{r.year_default}</option>
                 {r.year_options.map((y) => (
@@ -258,7 +258,7 @@ export default function RegisterPage() {
                   value={form.social}
                   onChange={handleChange}
                   placeholder={r.social_placeholder}
-                  className="w-full border border-zinc-200 rounded-xl pl-10 pr-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                  className="w-full border border-zinc-200 rounded-xl pl-10 pr-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition"
                 />
               </div>
             </div>
@@ -271,7 +271,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 rows={3}
                 placeholder=""
-                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition resize-none"
+                className="w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-vsa-red focus:border-transparent transition resize-none"
               />
             </div>
 
@@ -304,7 +304,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={state === "loading" || !agreed}
-              className="mt-2 w-full bg-red-700 text-white font-semibold py-3.5 rounded-xl hover:bg-red-800 active:scale-[0.98] transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="mt-2 w-full bg-vsa-red text-white font-semibold py-3.5 rounded-xl hover:bg-vsa-darkred active:scale-[0.98] transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {state === "loading" ? r.submitting : r.submit}
             </button>

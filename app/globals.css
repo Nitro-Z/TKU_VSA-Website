@@ -35,7 +35,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
 @keyframes slideUp {
@@ -122,4 +122,20 @@ body {
 }
 .btn-glow {
   animation: pulseGlow 2.6s ease-in-out infinite;
+}
+
+/* Accessibility: disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up,
+  .animate-bounce-slow,
+  .animate-gradient-text,
+  .btn-glow,
+  .orb-1, .orb-2, .orb-3 {
+    animation: none;
+  }
+  .fade-in-hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
