@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import { useRef, useCallback } from "react";
 import FadeIn from "./components/FadeIn";
 import { useT } from "./components/LanguageProvider";
 
@@ -160,9 +161,16 @@ export default function Home() {
 
       {/* Sự kiện */}
       <FadeIn>
-        <section className="py-16 px-6 max-w-3xl mx-auto w-full">
+        <section className="py-16 pb-8 px-6 max-w-3xl mx-auto w-full">
           <h2 className="text-2xl font-semibold mb-4 text-vsa-white">{h.events_title}</h2>
           <p className="text-zinc-400 italic">{h.events_empty}</p>
+        </section>
+      </FadeIn>
+
+      {/* Gallery kéo ngang */}
+      <FadeIn>
+        <section className="pb-16 px-6 max-w-5xl mx-auto w-full">
+          <DragScrollGallery />
         </section>
       </FadeIn>
 
@@ -217,6 +225,66 @@ export default function Home() {
         </div>
       </section>
 
+    </div>
+  );
+}
+
+const GALLERY_IMAGES = [
+  { src: '/images/events_galleries/cafe_culture_1.jpg', alt: 'Cafe Culture 1' },
+  { src: '/images/events_galleries/cafe_culture_2.jpg', alt: 'Cafe Culture 2' },
+  { src: '/images/events_galleries/yangmingshan_1.jpg', alt: 'Yangmingshan 1' },
+  { src: '/images/events_galleries/yangmingshan_2.jpg', alt: 'Yangmingshan 2' },
+  { src: '/images/events_galleries/keelung_shifen_1.jpg', alt: 'Keelung Shifen 1' },
+  { src: '/images/events_galleries/keelung_shifen_2.jpg', alt: 'Keelung Shifen 2' },
+];
+
+function DragScrollGallery() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isDown = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  const onMouseDown = useCallback((e: React.MouseEvent) => {
+    if (!ref.current) return;
+    isDown.current = true;
+    startX.current = e.pageX - ref.current.offsetLeft;
+    scrollLeft.current = ref.current.scrollLeft;
+    ref.current.style.cursor = 'grabbing';
+  }, []);
+
+  const onMouseLeave = useCallback(() => {
+    isDown.current = false;
+    if (ref.current) ref.current.style.cursor = 'grab';
+  }, []);
+
+  const onMouseUp = useCallback(() => {
+    isDown.current = false;
+    if (ref.current) ref.current.style.cursor = 'grab';
+  }, []);
+
+  const onMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!isDown.current || !ref.current) return;
+    e.preventDefault();
+    const x = e.pageX - ref.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    ref.current.scrollLeft = scrollLeft.current - walk;
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="flex gap-4 overflow-x-auto pb-2 select-none"
+      style={{ cursor: 'grab', scrollbarWidth: 'none' }}
+      onMouseDown={onMouseDown}
+      onMouseLeave={onMouseLeave}
+      onMouseUp={onMouseUp}
+      onMouseMove={onMouseMove}
+    >
+      {GALLERY_IMAGES.map((img, i) => (
+        <div key={i} className="relative shrink-0 rounded-xl overflow-hidden shadow-sm" style={{ width: 300, height: 210 }}>
+          <Image src={img.src} alt={img.alt} fill className="object-cover pointer-events-none" draggable={false} />
+        </div>
+      ))}
     </div>
   );
 }
